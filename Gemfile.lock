@@ -7,6 +7,23 @@ GIT
       thor
 
 GIT
+  remote: https://github.com/emberjs/ember-dev.git
+  revision: 2d426fe2fc35e576d0130b44b76e8981c0e8a3ee
+  branch: master
+  specs:
+    ember-dev (0.1)
+      aws-sdk
+      colored
+      ember-source
+      execjs
+      grit
+      kicker
+      rack
+      rake-pipeline (~> 0.8.0)
+      rake-pipeline-web-filters (~> 0.7.0)
+      uglifier
+
+GIT
   remote: https://github.com/livingsocial/rake-pipeline.git
   revision: 65b1e744defa208e313703d89f3453447cc103b2
   specs:
@@ -14,14 +31,6 @@ GIT
       json
       rake (~> 10.0.0)
       thor
-
-GIT
-  remote: https://github.com/wycats/rake-pipeline-web-filters.git
-  revision: c7c018af04a1b7be42fd447eebf23746e0f63855
-  specs:
-    rake-pipeline-web-filters (0.6.0)
-      rack
-      rake-pipeline (~> 0.6)
 
 GEM
   remote: http://rubygems.org/
@@ -38,7 +47,11 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    atomic (1.1.8)
+    atomic (1.1.9)
+    aws-sdk (1.9.5)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
     blockenspiel (0.4.5)
     builder (3.1.4)
     coffee-rails (4.0.0)
@@ -49,6 +62,9 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colored (1.2)
+    diff-lcs (1.2.4)
+    ember-source (0.0.8)
+      handlebars-source (>= 1.0.0.rc3, < 1.0.0.rc4)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -64,7 +80,12 @@ GEM
     github_downloads (0.1.3)
       github_api (~> 0.6)
       rest-client (~> 1.6)
-    hashie (2.0.4)
+    grit (2.5.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+      posix-spawn (~> 0.3.6)
+    handlebars-source (1.0.0.rc3)
+    hashie (2.0.5)
     httpauth (0.2.0)
     i18n (0.6.4)
     json (1.7.7)
@@ -89,6 +110,7 @@ GEM
       multi_json (~> 1.0)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    posix-spawn (0.3.6)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -98,6 +120,9 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.0.4)
+    rake-pipeline-web-filters (0.7.0)
+      rack
+      rake-pipeline (~> 0.6)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
@@ -109,9 +134,10 @@ GEM
     thread_safe (0.1.0)
       atomic
     tzinfo (0.3.37)
-    uglifier (1.0.4)
+    uglifier (2.1.0)
       execjs (>= 0.3.0)
-      multi_json (>= 1.0.2)
+      multi_json (~> 1.0, >= 1.0.2)
+    uuidtools (2.1.4)
     versionomy (0.4.4)
       blockenspiel (>= 0.4.5)
 
@@ -120,13 +146,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  colored
+  ember-dev!
   ember-docs!
   github_downloads
   json
   kicker
   rack
   rake-pipeline!
-  rake-pipeline-web-filters!
-  uglifier (~> 1.0.3)
   versionomy
